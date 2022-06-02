@@ -6,7 +6,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
-public class ExchangeComparatorService implements ExchangeComparator {
+public class ExchangeComparatorService implements ExchangeComparator
+{
     @Override
     public int compareRates(ExchangeRateDTO today, ExchangeRateDTO yesterday, String code) {
         Double exchangeRateToday = today.getRates().get(code);

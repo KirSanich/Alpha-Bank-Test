@@ -1,7 +1,6 @@
 package com.example.alphabanktest.exchange.controller;
 
-import com.example.alphabanktest.exchange.configuration.ExchangeConfiguration;
-import com.example.alphabanktest.exchange.dto.ExchangeRateDTO;
+
 import com.example.alphabanktest.giphy.dto.GiphyComplexDTO;
 import com.example.alphabanktest.giphy.dto.GiphyDTO;
 import com.example.alphabanktest.giphy.service.GiphyService;

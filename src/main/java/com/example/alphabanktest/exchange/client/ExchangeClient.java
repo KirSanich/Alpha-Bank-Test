@@ -1,5 +1,6 @@
 package com.example.alphabanktest.exchange.client;
 
+
 import com.example.alphabanktest.exchange.dto.ExchangeRateDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

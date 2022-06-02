@@ -7,7 +7,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableFeignClients
 public class AlphaBankTestApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(AlphaBankTestApplication.class, args);
     }
