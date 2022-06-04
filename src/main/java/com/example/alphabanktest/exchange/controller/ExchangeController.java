@@ -2,11 +2,9 @@ package com.example.alphabanktest.exchange.controller;
 
 
 import com.example.alphabanktest.giphy.dto.GiphyComplexDTO;
-import com.example.alphabanktest.giphy.dto.GiphyDTO;
 import com.example.alphabanktest.giphy.service.GiphyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,9 +16,9 @@ public class ExchangeController {
     private final GiphyService giphyService;
 
     @GetMapping("/currency")
-    public ResponseEntity<GiphyDTO> getHelpByCurrency(@RequestParam(name = "code") String code) {
+    public String getHelpByCurrency(@RequestParam(name = "code") String code) {
         GiphyComplexDTO giphyByRateWithCode = giphyService.getGiphyByRateWithCode(code);
-        return ResponseEntity.ok(giphyByRateWithCode.getGiphy()[0]);
+        return giphyByRateWithCode.getGiphy()[0].getUrl();
     }
 }
 

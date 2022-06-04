@@ -23,6 +23,8 @@ ext {
 }
 
 dependencies {
+    testImplementation "com.github.tomakehurst:wiremock-jre8:2.33.2"
+    implementation 'junit:junit:4.13.2'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
     compileOnly 'org.projectlombok:lombok'

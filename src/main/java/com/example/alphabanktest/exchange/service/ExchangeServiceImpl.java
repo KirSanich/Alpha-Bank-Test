@@ -27,7 +27,7 @@ public class ExchangeServiceImpl implements ExchangeService {
                 exchangeConfiguration.getAppId(),
                 exchangeConfiguration.getBase(),
                 today
-        );
+        ).getBody();
     }
     @Override
     public ExchangeRateDTO getYesterdayExchangeRate() {
@@ -37,6 +37,6 @@ public class ExchangeServiceImpl implements ExchangeService {
                 exchangeConfiguration.getAppId(),
                 exchangeConfiguration.getBase(),
                 yesterday
-        );
+        ).getBody();
     }
 }

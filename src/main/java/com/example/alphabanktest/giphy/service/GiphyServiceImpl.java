@@ -47,17 +47,17 @@ public class GiphyServiceImpl implements GiphyService {
                     giphyConfiguration.getRichParam(),
                     giphyConfiguration.getLimit(),
                     valueOfOffset
-                    );
+                    ).getBody();
             case -1 -> giphyClient.getRandomGiphy(
                     giphyConfiguration.getGiphyKey(),
                     giphyConfiguration.getBrokeParam(),
                     giphyConfiguration.getLimit(),
-                    valueOfOffset);
+                    valueOfOffset).getBody();
             case 0 -> giphyClient.getRandomGiphy(
                     giphyConfiguration.getGiphyKey(),
                     "equal",
                     giphyConfiguration.getLimit(),
-                    valueOfOffset);
+                    valueOfOffset).getBody();
             default -> {
                 throw new RuntimeException("Не удается найти подходящую гифку!");
             }
