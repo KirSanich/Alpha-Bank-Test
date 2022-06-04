@@ -82,6 +82,11 @@ ____
 
 `http://localhost:8084/currency?code=RUB`
 
+### Пример ответа:
+
+`https://giphy.com/gifs/IntoAction-girl-power-pay-day-equal-KHY6weasyYTKHYAVxc`
+
+
 
 
 
