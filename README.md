@@ -53,19 +53,19 @@ ____
 
 Склонировать репозиторий, выполнив команду:
 
-git clone https://github.com/KirSanich/Alpha-Bank-Test
+`git clone https://github.com/KirSanich/Alpha-Bank-Test`
 
 Перейдя в корневую папку проекта собрать проект:
 
-gradlew build
+`gradlew build`
 
 Собрать докер-образ с произвольным именем, в нашем случае giphy-image:
 
-docker image build ./ -t giphy-image 
+`docker image build ./ -t giphy-image `
 
 Запустить контейнер с нашим образом:
 
-docker run -p 8084:8084 -d --name giphy-service giphy-image
+`docker run -p 8084:8084 -d --name giphy-service giphy-image`
 
 ____
 
