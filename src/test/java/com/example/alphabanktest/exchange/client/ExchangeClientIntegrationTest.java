@@ -4,6 +4,7 @@ import com.example.alphabanktest.config.WireMockConfig;
 import com.example.alphabanktest.exchange.configuration.ExchangeConfiguration;
 import com.github.tomakehurst.wiremock.WireMockServer;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +41,7 @@ public class ExchangeClientIntegrationTest {
     }
 
     @Test
+    @DisplayName("Check existing response body")
     public void getResponseExchangeByTodayDate() {
         assertTrue(exchangeClient.getExchangeRateByDate(
                 exchangeConfiguration.getAppId(),
