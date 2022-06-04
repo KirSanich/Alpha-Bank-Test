@@ -22,7 +22,7 @@ public class ExchangeServiceImpl implements ExchangeService {
     @Override
         public ExchangeRateDTO getTodayExchangeRate() {
         String today = LocalDate.now().toString();
-        log.info("Получение курсов валют по отношению к доллару сегодня");
+        log.info("Get Exchange Rate from today");
         return exchangeClient.getExchangeRateByDate(
                 exchangeConfiguration.getAppId(),
                 exchangeConfiguration.getBase(),
@@ -32,7 +32,7 @@ public class ExchangeServiceImpl implements ExchangeService {
     @Override
     public ExchangeRateDTO getYesterdayExchangeRate() {
         String yesterday = LocalDate.now().minusDays(1).toString();
-        log.info("Получение курсов валют по отношению к доллару за вчера");
+        log.info("Get Exchange Rate from yesterday");
         return exchangeClient.getExchangeRateByDate(
                 exchangeConfiguration.getAppId(),
                 exchangeConfiguration.getBase(),

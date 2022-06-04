@@ -11,9 +11,9 @@ public class ExchangeComparatorService implements ExchangeComparator
     @Override
     public int compareRates(ExchangeRateDTO today, ExchangeRateDTO yesterday, String code) {
         Double exchangeRateToday = today.getRates().get(code);
-        log.info("Курc {} за сегодня по отношению к доллару равен {}", code, exchangeRateToday);
+        log.info("The exchange rate {} for today in relation to 1 dollar - {}", code, exchangeRateToday);
         Double exchangeRateYesterday = yesterday.getRates().get(code);
-        log.info("Курc {} за вчера по отношению к доллару равен {}", code, exchangeRateYesterday);
+        log.info("The exchange rate {} for yesterday in relation to 1 dollar - {}", code, exchangeRateYesterday);
         return exchangeRateToday.compareTo(exchangeRateYesterday);
     }
 }
